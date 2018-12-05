@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun attachBaseContext(newBase: Context?) {
-        HookHelper.hookAcitivtyManager()
+        HookHelper.hookActivityManager()
+        HookHelper.hookPackageManager(newBase)
         super.attachBaseContext(newBase)
     }
 }
